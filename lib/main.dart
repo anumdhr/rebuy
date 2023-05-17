@@ -3,8 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lottie/lottie.dart';
 import 'package:rebuy/screen/splash_screen/splash_screen.dart';
 
-import 'counter_bloc.dart';
-
 void main() {
   runApp(const MyApp());
 }
@@ -15,12 +13,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => CounterBloc(),
-      child:  MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home:SplashScreen(),
-      ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home:SplashScreen(),
     );
 
   }
